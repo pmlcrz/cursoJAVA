@@ -97,8 +97,12 @@ public class ClienteController extends HttpServlet {
 	
 	protected void ApagaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println(request.getParameter("id"));
+		String id = request.getParameter("id");
+		daocli.Apagar(id);
+		request.setAttribute("success", "Cliente apagado com sucesso!");
+		request.getRequestDispatcher("buscacliente").forward(request, response);
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
