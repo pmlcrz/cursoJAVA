@@ -1,2 +1,21 @@
 # cursoJAVA
-Atividades e projetos do curso de JAVA do SENAC
+
+<hr>
+
+Arquivos, atividades e anotações das Aulas de JAVA do SENAC.
+
+<hr>
+
+Linguagens:
+
+☕ Java
+
+🔶 HTML
+
+IDES:
+
+🌒 Eclipse
+
+🥔 NetBeans
+
+
