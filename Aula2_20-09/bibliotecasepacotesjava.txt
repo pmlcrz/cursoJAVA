@@ -1,0 +1,100 @@
+Pacotes e Bibliotecas de Java
+
+Programação 3: Orientação a Objetos e Java
+Tipos de Módulos em Java
+
+Classes
+
+agrupam definições de métodos, atributos, inicializadores, etc.
+definem tipos
+Pacotes
+
+agrupam definições de classes relacionadas
+estruturam sistemas de grande porte, facilitando a localização das classes
+oferece um maior nível de abstração: há mais classes do que pacotes
+ 
+
+Pacotes e Diretórios
+
+Cada pacote é representado por um diretório do sistema operacional
+Os arquivos neste diretório têm o mesmo cabeçário:
+     package nome_do_pacote
+Cada arquivo define uma ou mais classes que fazem parte do pacote
+Subdiretórios não correspondem a "subpacotes"
+ 
+
+Nomeando Pacotes
+
+O nome de um pacote deve ser parte do nome do seu diretório associado: o pacote
+
+exemplos.banco
+
+deve estar no diretório
+
+/home/phmb/java/exemplos/banco
+
+assumindo que o compilador Java foi informado para procurar pacotes em
+
+/home/phmb/java
+
+ 
+
+Pacotes e Information Hiding
+
+public
+
+atributos, métodos, inicializadores e classes
+declaração pode ser utilizada (é visível) em qualquer lugar
+private
+
+atributos, métodos e inicializadores
+declaração só pode ser utilizada na classe onde a mesma é introduzida
+protected
+
+atributos, métodos e inicializadores
+declaração só pode ser utilizada no pacote onde a mesma é introduzida, ou em uma subclasse da classe onde a mesma é introduzida
+default
+
+atributos, métodos, inicializadores e classes
+declaração só pode ser utilizada no pacote onde a mesma é introduzida
+ 
+
+Reuso de Declarações
+
+As declarações feitas em um arquivo são visíveis em qualquer outro arquivo do mesmo pacote, a menos que elas sejam privadas
+Qualquer arquivo de um pacote pode usar as definições visíveis de outros pacotes, através do mecanismo de importação de pacotes ...
+ 
+
+Importação de Pacotes
+
+Importando definição de tipo específica:
+package segundo.pacote;
+
+import primeiro.pacote.NomeDoTipo;
+
+...
+
+Importando as definições de tipo públicas:
+package segundo.pacote;
+
+import primeiro.pacote.*;
+
+...
+
+ 
+
+Importação de Pacotes: Detalhes
+
+Tanto "NomeDoTipo" quanto "primeiro.pacote.NomeDoTipo" podem ser usados no corpo de "segundo.pacote"
+"segundo.pacote" não pode definir um tipo com nome "NomeDoTipo"
+Importação de pacotes não é transitiva nem distribui sobre os arquivos de um pacote
+ 
+
+Pacotes da Biblioteca de Java
+
+Acesso a Internet e WWW (java.net)
+Applets (java.applet)
+Definição de interfaces gráficas (java.awt)
+Suporte a objetos distribuídos (java.rmi)
+Interface com Banco de Dados (java.sql)
+Básicos: threads e manipulação de strings (java.lang), arquivos (java.io), utilitários de propósito geral (java.util)
