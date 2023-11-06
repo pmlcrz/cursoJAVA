@@ -1,0 +1,30 @@
+- H2 database
+
+
+- comandos select (mysql)
+
+SELECT * FROM Cliente;
+
+SELECT * FROM cliente WHERE nome LIKE('%b%');
+
+SELECT * FROM cliente WHERE nome LIKE('%a');
+
+SELECT * FROM idcliente WHERE nome='beltrana' AND telefone='74178965';
+
+
+
+
+
+- macete nova area de trabalho (PC):
+
+ctlr + logo windows + d : nova
+
+ctlr + logo windows + < : anterior
+
+ctlr + logo windows + > : proxima
+
+ctlr + logo windows + tab : gerenciador
+
+
+
+//pesquisar sanitizar e validar (que podem ser feitas manualmente ou pr bibliotecas prontas
