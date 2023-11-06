@@ -1,0 +1,59 @@
+Fazer download do Java (caso o computador não tenha)
+
+https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR
+
+
+___________________________________________________________
+
+
+
+- Apache net.beans
+
+download: https://netbeans.apache.org/
+
+file
+
+new project
+
+choose project > Java with Ant ou Java with Maven
+
+
+
+Para executar o projeto > apertar 'Run'
+
+
+_______________________________________________________
+
+
+
+
+- Eclipse
+
+download: https://www.eclipse.org/
+
+https://www.eclipse.org/downloads/packages/
+
+
+Pra criar um projeto
+
+file
+
+new
+
+java project
+
+project name
+
+next
+
+finish
+
+
+_______________________________________________________
+
+
+Para fazer comentários em Java
+
+Mais de uma linha: /* */
+
+Somente uma linha: //
