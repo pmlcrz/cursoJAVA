@@ -109,7 +109,10 @@ public class ClienteController extends HttpServlet {
 	protected void EditaDados(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
-		
+		List<Cliente> cliente = daocli.Editar(id);
+		request.setAttribute("cliente", cliente);
+		RequestDispatcher rd = request.getRequestDispatcher("EditCliente.jsp");
+		rd.forward(request, response);
 	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
