@@ -114,10 +114,24 @@ public class ClienteController extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("EditCliente.jsp");
 		rd.forward(request, response);
 	}
-	/**
+	
+	protected void SalvaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		cli.setIdcliente(Integer.parseInt(request.getParameter("id")));
+		cli.setNome(request.getParameter("nome"));
+		cli.setTelefone(request.getParameter("telefone"));
+		daocli.Salvar(cli);
+		request.setAttribute("success", "Cliente cadastrado com sucesso!");
+		request.getRequestDispatcher("buscacliente").forward(request, response);
+	} 
+
+	
+        /**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
