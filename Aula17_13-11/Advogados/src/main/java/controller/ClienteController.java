@@ -125,6 +125,21 @@ public class ClienteController extends HttpServlet {
 		request.getRequestDispatcher("buscacliente").forward(request, response);
 	} 
 
+
+	
+	// Pesquisa na tabela de clientes pelo nome e/ou telefone.
+	protected void PesquisaDados(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String q = request.getParameter("q");
+		ArrayList<Cliente> lista = daocli.Pesquisar(q);
+		String success = (String) request.getAttribute("success");
+		if (success != null)
+			request.setAttribute("success", success);
+		request.setAttribute("clientes", lista);
+		request.setAttribute("q", q);
+		RequestDispatcher rd = request.getRequestDispatcher("RelClientes.jsp");
+		rd.forward(request, response);
+	}
 	
         /**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
